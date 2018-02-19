@@ -1,20 +1,94 @@
-<!-- mostrar en este HTML los TOPICS de /topics -->
-
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="assets/img/icon.png">
+    <title>Foro de opinión</title>
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-
-    <h1>Aqui van todos los temas</h1>
-    
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    
-    <script src="js/functions.js"></script>
-    <script src="js/main.js"></script>
-    
-  </body>
-</html>
+    <!--vista splash-->
+   <div class="container-fluid splash">
+     <div class="row">
+       <div class="col-xs-12">
+         <h1 class="text-center">Opinion</h1>
+         <img src="assets/img/gif.gif" alt="logo-white" id="logo-white" class="center-block">
+         <h1>Your opinion is important</h1>
+       </div>
+     </div>
+   </div>
+    <nav class="navbar navbar-default navbar-color">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><i class="fas fa-home"></i>Home</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#"><i class="fas fa-arrow-left"></i>Return</a></li>
+            <li><a href="#"><i class="fas fa-long-arrow-alt-right"></i></a></li>
+          </ul>
+          <form class="navbar-form navbar-left">
+            <div class="form-group input-group-lg col-lg-12">
+              <input type="text" class="form-control" placeholder="http://">
+            </div>
+          </form>
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <i class="fas fa-search"></i><input type="text" class="form-control" placeholder="">
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Primera sección -->
+    <section>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-6 col-xs-offset-3">
+            <h1 class="text-center">Foro cool</h1>
+          </div>
+          <div class="col-xs-3">
+            <button class="btn btn-default center-block btn-creat" type="submit">Creat theme</button>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid ocultar">
+        <div class="row">
+          <div class="col-xs-12">
+            <form class="form-horizontal">
+              <div class="form-group form-group-lg">
+                <label class="col-sm-2 control-label" for="formGroupInputLarge">Large label</label>
+                <div class="col-sm-10">
+                  <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Large input">
+                </div>
+                <label class="col-sm-2 control-label" for="formGroupInputLarge">Large label</label>
+                <div class="col-sm-10">
+                  <textarea name="name" rows="8" cols="80"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- jQuery -->
+      <!--<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>-->
+      <!-- Enlace Jquery Vs 3.2.1 -->
+      <script src="vendors/js/jquery-3.2.1.min.js"></script>
+      <!-- icons fontawesone -->
+      <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+      <!-- Enlace Bootstrap - Funcionalidad en Javascript Vs 3.3.7 -->
+      <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+      <script src="js/functions.js"></script>
+      <script src="js/main.js"></script>
+    </body>
+  </html>

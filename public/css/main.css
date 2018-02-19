@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Berkshire Swash', cursive;
+
+}
+body{
+  background-color: #eeeeee;
+}
+.navbar-default .navbar-brand{
+    color: white;
+}
+.navbar-default .navbar-nav>li>a{
+  color: white;
+}
+.navbar-color{
+  background: radial-gradient(circle,#b2077b,#530060);
+  color:white;
+
+}
+.splash{
+  background: radial-gradient(circle,#b2077b,#530060);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left:0;
+  color: white;
+}
+
+.btn-creat{
+  background-color: #07b294;
+  margin-top: 2rem;
+}
+.ocultar{
+  display: none;
+}
