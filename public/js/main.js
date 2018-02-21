@@ -92,7 +92,7 @@ $(document).ready(function () {
     mostrar();
   });
 
-  $('#btn-crear').click(function(){
+  $('#crear').click(function(){
     var autor = $('#autor').val();
     var mensaje = $('#mensaje').val();
     if (autor !== '' && mensaje !== '') {

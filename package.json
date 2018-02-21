@@ -20,5 +20,8 @@
   "dependencies": {
     "express": "^4.16.2"
   },
-  "description": ""
+  "description": "Crear un foro donde podamos crear temas y responder a esos temas.\r ### Integrantes:\r - Betsy Vidal\r - Araceli Cueva\r - Melissa Yauri",
+  "devDependencies": {
+    "nodemon": "^1.15.1"
+  }
 }
