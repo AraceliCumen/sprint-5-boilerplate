@@ -50,3 +50,24 @@ body{
 .btn-buscar{
   margin-top: 0px;
 }
+
+#container{
+  margin-top: 20px;
+}
+
+.container-foro{
+  background-color: #07b294;
+  padding: 10px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+
+.img-user{
+  width: 50px;
+  margin-right:20px;
+}
+
+.img-message{
+  width: 20px;
+  margin-right:5px;
+}
