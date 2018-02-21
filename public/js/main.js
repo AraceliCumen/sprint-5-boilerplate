@@ -63,12 +63,12 @@ $(document).ready(function () {
               // console.log(element.content);
               const estructura = `<div class="row"><div class="col-xs-12 container-foro"><p class="user-name"><img src="assets/img/user.png" class="img-user">${element.author_name}</p><p>${element.content}</p><p><img src="assets/img/mesage.png" class="img-message">${element.responses_count}</p><div id="commenting"></div><div id="form" class="ocultar"><input id="inputComment" type="text"> <br> <button id="btnComment">send comment</button></div><button id="newComment" data-id="${element.id}" class="btn btn-outline-secondary" type="button" id="respuesta">Crear respuesta</button></div></div>`
               container.append(estructura);
-              $('#newCommet').one('click', function () {
+              $('#newComment').one('click', function () {
                 var idtema = $(this).data('id');
                 console.log(idtema);
                 $('#form').removeClass('ocultar');
               });
-              $('#btnCommen').one('click', function () {
+              $('#btnComment').one('click', function () {
                 console.log('idtema');
                 $('#form').addClass('ocultar');
               });
