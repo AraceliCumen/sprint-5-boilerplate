@@ -38,8 +38,15 @@ body{
 
 .btn-creat{
   background-color: #07b294;
-  margin-top: 2rem;
 }
 .ocultar{
   display: none;
+}
+
+.margin-left-10{
+  margin-left: 10px;
+}
+
+.btn-buscar{
+  margin-top: 0px;
 }
