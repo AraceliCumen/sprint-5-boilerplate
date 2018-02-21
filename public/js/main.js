@@ -3,6 +3,18 @@ $(document).ready(function () {
   $('.splash').delay(1000).fadeOut('slow');
 
   var container = $('#container');
+  var nameForo = $('#buscar').val();
+
+  function getNews() {
+    var request = new XMLHttpRequest();
+    request.open('GET', `https://examen-laboratoria-sprint-5.herokuapp.com/topics`);
+    request.onreadystatechange = function () {
+      if (this.readyState === 4) {
+        request.onload = addNews;
+      }
+    };
+    request.send();
+  }
 
   function addNews() {
     const data = JSON.parse(this.responseText);
@@ -30,10 +42,9 @@ $(document).ready(function () {
   }
 
   function buscar() {
-    var nombreForo = $('#buscar').val();
     const data = JSON.parse(this.responseText);
     data.forEach(function (element) {
-      if (nombreForo === element.content && nombreForo != '') {
+      if (nameForo === element.content) {
         var request = new XMLHttpRequest();
         var topic_id = element.id;
         console.log(id);
@@ -61,20 +72,51 @@ $(document).ready(function () {
           }
         };
         request.send();
-      }else{
-        alert('no has ingresado nada para buscar!!!')
       }
     });
   }
 
   $('#btn-buscar').click(function () {
     container.empty();
-    buscar();
+    var request = new XMLHttpRequest();
+    request.open('GET', `https://examen-laboratoria-sprint-5.herokuapp.com/topics`);
+    request.onreadystatechange = function () {
+      if (this.readyState === 4) {
+        request.onload = buscar;
+      }
+    };
+    request.send();
   });
 
   $('#btn-todos').click(function () {
     mostrar();
   });
 
+  $('#btn-crear').click(function(){
+    var autor = $('#autor').val();
+    var mensaje = $('#mensaje').val();
+    if (autor !== '' && mensaje !== '') {
+      var request = new XMLHttpRequest();
+      request.open('POST', 'https://examen-laboratoria-sprint-5.herokuapp.com/topics');
+      request.setRequestHeader('Content-Type', 'application/json');
+      request.onreadystatechange = function () {
+        if (this.readyState === 4) {
+          // console.log('Status:', this.status);
+          // console.log('Headers:', this.getAllResponseHeaders());
+          // console.log('Body:', this.responseText);
+        }
+      };
 
+      var body = {
+        'author_name': autor,
+        'content': mensaje,
+      };
+
+      request.send(JSON.stringify(body));
+      $('#autor').val('');
+      $('#mensaje').val('');
+      container.empty();
+      getNews();
+    }
+  });
 });
